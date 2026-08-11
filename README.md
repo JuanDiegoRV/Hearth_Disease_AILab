@@ -28,12 +28,22 @@ The six-feature model reaches approximately 0.739 accuracy, 0.732 precision, 0.8
 
 ## SageMaker training and testing
 
-Upload the notebook, `heart.csv`, `sagemaker_train.csv`, and `sagemaker_test.csv` to AWS Academy SageMaker Studio. Run the notebook to train and test the model, record the available environment or instance configuration, and compare the resulting metrics with the local values above. Do not create or deploy an endpoint.
+The notebook was also run in AWS Academy SageMaker Code Editor using the base Python 3.12.13 kernel. The cloud run reproduced the prepared data exports: 210 training rows and 92 test rows, each with six features plus the target column. It also retained `lambda = 1` as the selected regularization strength. No endpoint was created or deployed.
 
 ### Evidence collected
 
-Current SageMaker Studio environment:
+The screenshots are stored in [`evidence/`](evidence/):
 
-![SageMaker Studio environment](awsev1.jpeg)
+- Course SageMaker environment used as the cloud workspace:
 
-Two additional screenshots are still required after cloud execution: one showing successful model training and another showing the held-out test metrics.
+  ![AWS Academy SageMaker environment](evidence/sagemaker_environment.jpeg)
+
+- Initial setup issue: Python code was entered in the Bash terminal, which explains the displayed syntax errors. The correction was to execute Python only in notebook code cells.
+
+  ![Initial Bash and Python setup issue](evidence/sagemaker_initial_terminal_error.jpeg)
+
+- Corrected project execution in the base Python 3.12.13 kernel. The output confirms the exported training and test files and the selected regularization value.
+
+  ![Successful SageMaker project execution](evidence/sagemaker_project_execution.jpeg)
+
+The test metrics reported above come from the executed notebook. A separate SageMaker screenshot focused on the metrics table can be added later if the submission requires visual proof of that specific output.

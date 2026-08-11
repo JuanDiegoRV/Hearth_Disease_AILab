@@ -7,12 +7,12 @@
 !heart_disease_lr_analysis.ipynb
 !*.csv
 
-# Keep SageMaker evidence images stored at the repository root.
+# Allow image evidence when needed.
 !*.png
 !*.jpg
 !*.jpeg
 
-# Also allow organized evidence folders.
+# Keep organized evidence folders.
 !images/
 !images/**
 !evidence/
