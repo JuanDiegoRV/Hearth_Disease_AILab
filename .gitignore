@@ -1,0 +1,19 @@
+# Ignore everything by default.
+*
+
+# Keep the repository configuration and required deliverables.
+!.gitignore
+!README.md
+!heart_disease_lr_analysis.ipynb
+!*.csv
+
+# Keep SageMaker evidence images stored at the repository root.
+!*.png
+!*.jpg
+!*.jpeg
+
+# Also allow organized evidence folders.
+!images/
+!images/**
+!evidence/
+!evidence/**
